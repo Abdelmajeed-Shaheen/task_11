@@ -21,7 +21,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    
+
     path('restaurants/list/',views.restaurant_list ,name='restaurant-list'),
     path('restaurants/<int:restaurant_id>/detail/',views.restaurant_detail ,name='restaurant-detail'),
 
@@ -30,7 +30,7 @@ urlpatterns = [
     path('restaurants/<int:restaurant_id>/delete/',views.restaurant_delete ,name='restaurant-delete'),
 
     path('restaurants/<int:restaurant_id>/item/add/',views.item_create ,name='item-create'),
-
+    path('error',views.no_access,name='noaccess'),
     path('signup/',views.signup ,name='signup'),
     path('signin/',views.signin ,name='signin'),
     path('signout/',views.signout ,name='signout'),
